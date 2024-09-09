@@ -1,0 +1,521 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 5px 0;
+    color: #fff;
+    z-index: 2000;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: -5px auto;
+    padding: 0 15px;
+    
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    height: 30px;
+}
+
+.nav-links li {
+    margin: 0;
+    border: 1px solid #f1c40f;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: -15px;  
+}
+
+.nav-links li:hover {
+    background-color: #f1c40f;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Ensure content doesn't hide behind the fixed header */
+body {
+    margin: 0;
+    padding-top: 70px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px; /* Height of header */
+        left: 0;
+        padding: 15px 0;
+        height: 320px;
+        align-items: center;
+
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #444;
+        margin-top: 5px;  
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #222;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    font-size: 48px;
+    color: #f1c40f;
+}
+
+#hero p {
+    color: #bbb; /* Light gray text color for readability */
+    font-size: 18px; /* Adjust font size for readability */
+    width: 90%; /* Full width to ensure it stretches across the container */
+    justify-content: center;/* Center the text for better alignment with headings */
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 0 auto; /* Center the paragraph if needed */
+     /* Limit the width for better readability on larger screens */
+    margin-bottom: 40px;
+}
+
+
+.cta .btn {
+    background-color: #f1c40f;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta .btn:hover {
+    background-color: #d4ac0d;
+}
+
+/* About Section */
+#about {
+    background-color: #333;
+    padding: 50px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #fff;
+}
+
+.about-text {
+    color: #fff;
+    flex: 1;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.about-text h2 {
+    color: #f1c40f;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.about-text p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+
+}
+
+.cta .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    display: inline-block;
+    border: 2px solid #f1c40f;
+}
+
+.cta .primary-btn {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.cta .secondary-btn {
+    background-color: transparent;
+    color: #f1c40f;
+}
+
+.cta .btn:hover {
+    background-color: #d4ac0d;
+    color: #fff;
+}
+
+/* Project Section */
+#projects {
+    background-color: #222;
+    padding: 50px 0;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #f1c40f;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.project-item h3 {
+    color: #f1c40f;
+}
+
+.project-item p {
+    text-align: center;
+}
+
+.project-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #fff;
+}
+
+.custom-link {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* Education Section */
+#education {
+    background-color: #333;
+    padding: 50px 0;
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #f1c40f;
+    margin-bottom: 30px;
+}
+
+/* General container styling */
+#education {
+    padding: 40px 0;
+    background-color: #333;
+
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* Education Section Container */
+.education-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border: 1px solid #f1c40f; /* Adds a border around the education content */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    background-color: #333; /* Light background to make it stand out */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    width: 95%; /* Optional: limits the width */
+    margin: 0 auto; /* Centers the content */
+}
+
+/* Individual Education Entries */
+.education-entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.year-location {
+    width: 30%; /* Adjust width of the date/location section */
+    text-align: left;
+    font-size: 16px;
+}
+
+.degree-info {
+    width: 65%; /* Adjust width of the degree info section */
+    text-align: left;
+}
+
+.degree-info h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.degree-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .education-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        border: 1px solid #f1c40f; /* Adds a border around the education content */
+        border-radius: 10px; /* Optional: adds rounded corners */
+        background-color: #333; /* Light background to make it stand out */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        width: 90%; /* Optional: limits the width */
+        margin: 0 auto; /* Centers the content */
+    }
+
+    .education-entry {
+        flex-direction: column;
+    }
+
+    .year-location, .degree-info {
+        width: 100%; /* Full width for small screens */
+    }
+}
+
+
+/* Achievement Section */
+#achievements {
+    background-color: #222;
+    padding: 50px 0;
+}
+
+#achievements h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #f1c40f;
+    margin-bottom: 30px;
+}
+
+.achievement-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.achievement-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.achievement-item h3 {
+    color: #f1c40f;
+}
+
+.achievement-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #fff;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #333;
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 30px;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #f1c40f; /* Yellow hover background */
+    color: #000;
+    border-radius: 8px; /* Rounded border */
+}
+
+/* Responsive Design for Larger Screens */
+@media (min-width: 768px) {
+    .contact-info {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    padding: 20px 0;
+    color: #bbb;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .hero-content,
+    .about-content,
+    .project-grid,
+    .achievement-grid {
+        flex-direction: row;
+    }
+
+    .project-item,
+    .achievement-item {
+        width: 30%;
+    }
+
+    .contact-form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contact-form .submit-btn {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-item,
+    .achievement-item {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .contact-form .submit-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+}
